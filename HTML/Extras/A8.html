@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Stock market</title>
+
+<script>
+
+var time;
+
+function getStockPrice()
+{
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() 
+  {
+    if (xhttp.readyState == 4 && xhttp.status == 200)
+	{
+      processReceipt(xhttp);
+    }
+  };
+  xhttp.open("GET", "A8.xml", true);
+  xhttp.send();
+}
+
+function processReceipt(xhttp)
+{
+  var xml = xhttp.responseXML;
+  
+  var stockArray = parseXML(xml);
+
+console.log(stockArray);
+
+  display(stockArray);
+}
+
+function parseXML(xml)
+{
+  var stockArray = {};
+  
+  var productElements = xml.getElementsByTagName("onlineOrder")[0];
+  console.log(stockElements);
+  stockArray.time = productElements.getAttribute("month");
+  stockArray.arrayList = [];
+  
+  var stockElements = productElements.getElementsByTagName("product");
+  console.log(productElements);
+  for(var i=0; i< stockElements.length; i++)
+  {
+
+    var product = {};
+
+    product.code = stockElements[i].getElementsByTagName("code")[0].childNodes[0].nodeValue;
+
+	product.unitPrice = Number(stockElements[i].getElementsByTagName("unitPrice")[0].childNodes[0].nodeValue);
+	
+    product.lastMonth = Number(stockElements[i].getElementsByTagName("lastMonth")[0].childNodes[0].nodeValue);
+
+    product.thisMonth = Number(stockElements[i].getElementsByTagName("thisMonth")[0].childNodes[0].nodeValue);
+	
+	product.Change = product.thisMonth - product.lastMonth;
+
+
+    stockArray.arrayList.push(product);
+
+  }
+  return stockArray;
+}
+
+function display(stockArray)
+{  
+  
+  
+  var html = "<table border='1'>";
+  html+="<h1>Online order statistics for "+stockArray.time+"</h1>";
+  html += "<tr><th>Code</th><th>Unit Price</th><th>Last Month</th><th>This Month</th><th>Change</th></tr>";
+
+  for(var i=0; i<stockArray.arrayList.length; i++)
+  {
+
+    html += "<tr>";
+	html += "<td align = 'center'>" + stockArray.arrayList[i].code + "</td>";
+	html += "<td align = 'right'>" + stockArray.arrayList[i].unitPrice+ "</td>";
+	html += "<td align = 'right'>" + stockArray.arrayList[i].lastMonth+ "</td>";
+	html += "<td align = 'right'>" + stockArray.arrayList[i].thisMonth + "</td>";
+	var change = stockArray.arrayList[i].thisMonth - stockArray.arrayList[i].lastMonth;
+	if(change < 0)
+	{
+
+      html += "<td style='color:red' align = 'right'>" + change + "</td>";
+
+    }
+	else
+	{
+      html += "<td style='color:green' align = 'right'>" + change + "</td>";
+    }
+	html += "</tr>";
+	
+  }
+  html += "</table>";
+  html += "<br />";
+  
+  var stockDiv = document.getElementById("productprices");
+  stockDiv.innerHTML = html;
+ 
+
+}
+
+</script>
+</head>
+<body>
+
+<button onClick="getStockPrice()">Click here to view receipt</button>
+
+<div id="productprices" />
+
+</body>
+</html>

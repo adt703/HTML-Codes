@@ -1,0 +1,287 @@
+<!-- Student Name: Arvind Thillainathan, Student Number: 5514678, CSIT128, Assignement-4 -->
+<!- References : 
+    1.http://www.w3schools.com/
+    2.https://www.google.com.au/search?q=uow+logo&espv=2&biw=1920&bih=979&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA_bCnkcXOAhXBpJQKHaRmCk4Q_AUIBigB
+-->
+
+
+<html>
+
+<head>
+
+<title>
+UOW Australia Doctors
+</title>
+
+
+<link rel="stylesheet" href="mystyle.css">
+
+<style>
+
+ body{
+      background-color: yellow;
+ }
+
+ p{
+   color:red;
+   font-size:110%;
+ }
+
+ p1{
+    color:blue;
+    font-size:110%;
+ }
+
+ p2{
+   color:purple;
+   font-size:115%;
+ }
+
+ h1{
+   color:blue;
+   font-size:120%;
+ }
+ 
+ h2{
+    color:brown;
+    font-size:110%;
+ }
+
+ li{
+    color:blue;
+    font-size:120%;
+ }
+ 
+  pre{
+    color: gree;
+    font-size:125%;
+ }
+
+</style>
+
+</head>
+
+<!нн This uses document CSS нн>
+<body>
+
+<!нн This uses document CSS нн>
+<h1 align = "center"><u>Welcome to UOW Doctors</u></h1>
+<img src = "uow.png" alt = "UOW" />
+
+<p>
+This is a website owned by the University of Wollongong medical facility. The purpose of this website is to help students find the Docotrs they need to fix an appointment.
+</p>
+
+<!нн This uses document CSS нн>
+<p1>
+If you know the Docotr that you require you can search that particular doctor on the search menu below. Press the "Search Doctor" key below to directly head over there.
+</p>
+
+<!нн This uses document CSS нн>
+<p2>
+If you don't know a doctor or what doctor you require, please click the "Enter your details". There you will be asked to provide details about the problem you have so that we find a suitable doctor for you.
+</p> 
+
+<p>
+Once you submit your infomration you will require to login into your account. To login into your account enter your SOLS details to login.
+</p>
+</br></br>
+<hr/>
+
+<!нн This uses document CSS нн>
+<h2 align = "center"><u>Search Doctor</u></h2>
+
+</br>
+
+<form action = "service1" method = "get">
+
+Firstname &nbsp;&nbsp;
+<input type="text" name="f1name" size = "32">
+</br></br>
+
+Lastname  &nbsp;&nbsp;
+<input type = "text" name = "l1name" size = "32">
+</br></br>
+
+Specialist  &nbsp;&nbsp;&nbsp;
+<input type = "text" name = "speclist" size ="32">
+</br></br>
+
+<input type="Submit" value = "Submit">
+<input type = "reset" value = "Reset">
+</form>
+<pre>
+Enter the Doctor's firstname/lastname/specialist and press search.
+
+If you cannot find what you wanted please login into your account. Click the link below.
+
+<a href =""><b><i>Click here</i><b></a>
+</br>
+</pre>
+<hr/>
+
+<!нн This uses external CSS нн>
+<h3 align = "center"><u>Enter your details</u></h2>
+
+
+<form action = "service1" method = "post">
+
+<ol>
+
+
+<!нн This uses external CSS нн>
+<li>
+Are you a male or female ?</br> 
+<input type="radio" name="stdlist" value="m">Male
+<input type="radio" name ="stdlist" value="f">Female
+</li></br>
+
+
+<!нн This uses external CSS нн>
+<li>
+Date of Birth :</br>
+<input typ="text" name= "stdlist" size = "10">
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+Marriage status : </br>
+<input type="radio" name="stdlist" value="md">Married
+<input type="radio" name ="stdlist" value="s">Single
+<input type = "radio" name = "stdlist" value="di">Divorced
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+Number of Children:</br>
+<input typ="text" name= "stdlist" size = "5">
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+Number of pets:</br>
+<input typ="text" name= "stdlist" size = "5">
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+What is your profession ?:</br>
+<input typ="text" name= "stdlist" size = "12">
+</li></br>
+
+<li>
+How many hours do you work per week ?:</br>
+<input typ="text" name= "stdlist" size = "8">
+</li></br>
+
+
+<!нн This uses external CSS нн>
+<li>
+Does your family has a history of illnesses ?
+<input type="radio" name="stdlist" value="y">Yes
+<input type="radio" name ="stdlist" value="n">No
+<input type="radio" name ="stdlist" value="mk">I don't know.
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+If yes then describe them please:</br>
+<textarea name="illcom" rows="4" cols="40">
+</textarea>
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+For many days are experiecing your current illness ?:</br>
+<input typ="text" name= "stdlist" size = "7">
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+Can you describe what you or the patient is experiencing ?:</br>
+<textarea name="illcom" rows="4" cols="40">
+</textarea>
+</li></br>
+
+
+<!нн This uses document CSS нн>
+<li>
+Have you travelled outside of Australia in the past two years ?
+<input type="radio" name="stdlist" value="y">Yes
+<input type="radio" name ="stdlist" value="n">No
+</li></br>
+
+<li>
+If yes, please list the countries you have visited ?:</br>
+<input typ="text" name= "stdlist" size = "45">
+</li></br>
+
+<li>
+Has anyone you have been contacted/Close with travelled outside of Australia in the past two years ?
+<input type="radio" name="stdlist" value="y">Yes
+<input type="radio" name ="stdlist" value="n">No
+</li></br>
+
+<li>
+If yes, please list the countries they have visited ?:</br>
+<input typ="text" name= "stdlist" size = "45">
+</li></br>
+
+
+<li>
+What is the convenient date for you or the patient to have the appointment ?</br>
+<input type="checkbox" name="apday" value="md">Monday<br />
+<input type="checkbox" name="apday" value="td">Tuesday<br />
+<input type="checkbox" name="apday" value="wd">Wednesday<br />
+<input type="checkbox" name="apday" value="thd">Thursday<br />
+<input type="checkbox" name="apday" value="fd">Friday<br />
+<input type="checkbox" name="apday" value="sd">Saturday<br />
+<input type="checkbox" name="apday" value="sud">Sunday<br />
+</li></br>
+
+<li>
+Please enter your email address:</br>
+<input typ="text" name= "stdlist" size = "25">
+</li></br>
+
+<li>
+
+<select name="departure">
+    <option value="ch">Cash</option>
+    <option value="cd">Card</option>
+    <option value="cq">Cheque</option>
+</select>
+  
+</li></br>
+
+</ol>
+
+<input type="Submit" value = "Submit">
+
+</br></br>
+
+</form>
+
+<hr>
+
+<!нн This uses inline CSS нн>
+
+<p style="color: blue; font-size:135%">
+akt703@uow.au : UOW Hospital Ltd &cpy
+</p>
+
+<!нн This uses external CSS нн>
+<p>
+Telephone: 0496325968
+</p>
+
+</body
+
+</html>

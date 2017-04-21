@@ -1,0 +1,46 @@
+ body{
+      background-color: yellow;
+ }
+
+ p{
+   color:orange;
+   font-size:120%;
+ }
+
+ p1{
+    color:green;
+    font-size:120%;
+ }
+
+ p2{
+   color:purple;
+   font-size:115%;
+ }
+
+ h1{
+   color:blue;
+   font-size:120%;
+ }
+ 
+ h2{
+    color:brown;
+    font-size:110%;
+ }
+
+ h3{
+    color:green;
+    font-size:130%;
+ }
+
+ li{
+    color:blue;
+    font-size:120%;
+ }
+
+ pre{
+    color: gree;
+    font-size:125%;
+ }
+
+ 
+ 

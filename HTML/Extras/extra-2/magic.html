@@ -1,0 +1,168 @@
+<html>
+
+<head>
+
+<title>
+GameofArvind
+</title>
+
+<script>
+
+var x_val = 0;
+
+var imagecollection = ["fish.jpg","bird.jpg","dog.jpg","cat.jpg","frog .jpe"];
+var position =0;
+
+var std_fname =[];
+var std_lname =[];
+var std_stdnum =[];
+var std_count=0;
+
+function addnum()
+{
+	x_val+=1;
+	var timer = setInterval(displaynumber,20);
+}
+
+function minusnum()
+{
+	x_val-=1;
+	var timer = setInterval(displaynumber,20);
+}
+
+function displaynumber() 
+{
+  document.getElementById("number").innerHTML = x_val;
+}
+
+function previmg()
+{
+	if(position==0)
+	{
+		position =4;
+	}
+	else
+	{
+		position-=1;
+	}
+	var image = document.getElementById("animal");
+	image.src = imagecollection[position];
+}
+
+function nextimg()
+{
+	if(position==4)
+	{
+		position =0;
+	}
+	else
+	{
+		position+=1;
+	}
+	var image = document.getElementById("animal");
+
+	image.src = imagecollection[position];
+}
+
+function entername()
+{
+	var fname = prompt("Enter Student's first name");
+	if(fname != null)
+	{
+		var lname = prompt("Enter Student's last name");
+		if(lname != null)
+		{
+			var stdnum = prompt("Enter Student's number");
+			if(stdnum != null)
+			{
+				var li = document.createElement("li");
+				var node = document.createTextNode(stdnum+", "+fname+" "+lname);
+				li.appendChild(node);
+				document.getElementById("displayall").appendChild(li);
+				std_count++;
+			}
+		}
+	}
+	else
+	{
+		alert("Name not entered");
+		std_count=0;
+	}
+	
+	document.getElementById("std_track").innerHTML = std_count;
+	<!--var display_details = setInterval(displayallstd,1000)
+}
+
+function countdown()
+{
+  var i =10;
+  var e = document.getElementById("countdown");
+  var moveTextSchedule = setInterval(down,100);
+  
+  function down()
+  {
+    i--; 
+	alert(i);
+    if (i==0) 
+	{
+      clearInterval(moveTextSchedule);
+    }
+  }
+}
+
+	
+	
+	
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Adding Numbers Act</h2>
+	<div align = "center">
+		<button onclick="addnum()">+</button>
+
+		<span id = "number"></span>
+
+		<button onclick="minusnum()">-</button>
+	</div>
+	
+<hr>
+
+<h2>The Second Act</h2>
+
+	<div align = "center">
+		<button onclick="previmg()">Previous</button>
+
+		<img id="animal" src="fish.jpg" height="400px" width="400px"/>
+
+		<button onclick="nextimg()">Next</button>
+	</div>
+
+<hr>
+
+<h2>Participating Students</h2>
+
+	<div>
+		<button onclick="entername()">Add Student</button>
+		<br><br>
+		<ul id="displayall" ></ul>
+		<br><br>
+		Total Number of Students :
+		<span id="std_track">0</span>
+	</div>
+	
+<hr>
+<h2>Count Down</h2>
+
+<button onclick="countdown()">Start Countdown</button>
+<span id="countdown"></span>
+
+
+</body>
+
+</html>

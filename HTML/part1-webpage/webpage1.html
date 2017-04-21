@@ -1,0 +1,245 @@
+
+
+<html>
+
+<head>
+
+<title>
+UOW Lottery
+</title>
+
+<style>
+
+  #content{
+           width:400px;
+           height:200px;
+           padding:10px;
+           position:absolute;
+           top:50%;
+           left:50%;
+           margin-left:-160px;
+           margin-top:455px;
+           text-align:center;
+  }
+
+  #content1{
+           width:400px;
+           height:200px;
+           padding:10px;
+           position:absolute;
+           top:50%;
+           left:50%;
+           margin-left:-160px;
+           margin-top:780px;
+           text-align:center;
+  }
+
+ .firprizes{
+         color:green;
+         font-size:130%;
+ }
+
+ .secprize{
+           color:blue;
+           font-size:130%;
+ }
+
+ .thrprize{
+           color:red;
+           font-size:130%;
+ }
+
+  .textalign{
+           
+           color: purple;
+           font-size:150%;
+ }
+
+  .text2align{
+            
+            color: orange;
+            font-size:130%;
+ }
+
+ #btn{
+      border:none;
+      padding:6px 12px 6px 12px;
+      margin-top:10px;
+      background:#fff;
+      border-radius:2px;
+      cursor:pointer;
+      transition:box-shadow 0.3s;
+  }
+  #btn:hover{
+	    box-shadow:2px 2px 10px rgba(0,0,0,0.3);
+
+
+  #main_bg{
+	min-width:1204px;
+	min-height:100%;
+	width:100%;
+	height:auto;
+	position:fixed;
+  }
+</style>
+
+<script>
+
+ function checkif() {
+  var x = Math.floor(Math.random()*10001);
+  var y = Math.floor(Math.random()*10001);
+  var z = Math.floor(Math.random()*10001);
+
+  alert("First place: "+x);
+  alert("Second place: "+y);
+  alert("Third place: "+z);
+}
+</script>
+
+
+
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+
+<!нн This uses inline CSS нн>
+
+<body style="background-color:lightgrey;">
+
+<img src="uow.png" id="main_bg"/>
+
+<!нн This uses inline CSS нн>
+
+<h1 style="color:blue; font-size:360%">
+
+Welcome to UOW Lottery day
+
+</h1>
+
+<!нн This uses inline CSS нн>
+
+<p style  = "color: red; font-size:160%">
+
+This is the annual UOW Lottery day hosted by UOW Unicrew of 2016.
+The funds of this event are donated to UOW charity center. There are two events held today.
+One is the main lottery event and the other will be mini games, where all ages can participate.
+At the bottom page is the table with the list of awards of both lottery and minigames.
+
+</p>
+
+<!нн This uses inline CSS нн>
+
+<div style="border:1px solid black; padding:10px;">
+ 
+ <p>
+ Click on the button to find the winnners of 2016 Lottery event. 
+ <button id="btn" onClick="checkif()">Click me to generate the Number</button>
+</div>
+
+
+<!нн This uses inline CSS нн>
+<div id="content" >
+
+  <p style="color:brown; font-size:150%;">
+  <u><b>
+  The Award list for lotteries:
+  </b></u>
+  </p>
+
+  <p class="firprizes" >
+  1st Place : $2000 Cash price
+  </p>
+
+  <p class="secprize">
+  2nd Place : $1000 Cash price
+  </p>
+
+  <p class="thrprize">
+  3rd Place : $200  Cash price
+  </p>
+
+  <p class="textalign">
+  <u><b>
+  The Award list for Minigames:
+  </u></b>
+  </p>
+
+  <p class="text2align">
+  Winner : $100 Unishop gift voucher
+  </p>
+
+</div>
+
+<!нн This uses External CSS нн>
+
+<div id="content1">
+  
+  <h2>
+  List of 2016 Charity events 
+  </h2>
+
+  <ol>  
+
+
+<!нн This uses document CSS нн>
+  <li>
+  Corrimal Fund raiser
+  </li>
+
+  <li>
+  Albion park BBQ Event
+  </li>
+
+  <li>
+  Daffodil Day
+  </li>
+
+  <li>
+  Relay for life
+  </li>
+
+  </ol>
+  
+  <p1>
+  A whopping $70592 was collected in this event. Below is a list of amount collected from each event.
+  </p1>
+
+  <ol>
+
+  <li>
+  Corrimal Fund raiser : $19,598
+  </li>
+
+  <li>
+  Albion park BBQ Event : $18,025
+  </li>
+
+  <li>
+  Daffodil Day  : $23,009
+  </li>
+
+  <li>
+  Relay for life : $9560
+  </li>   
+
+  </ol>
+  
+</div>
+
+<!нн This uses external CSS нн>
+<p>
+Below is the contact details of committe handling the event
+</p>
+
+<!нн This uses external CSS нн>
+<p>
+Telephone: 0496325968
+</p>
+
+<!нн This uses Inline CSS нн>
+<p style="color:blue; font-size:135%;">
+@akt703
+</p>
+</body>
+
+</html>

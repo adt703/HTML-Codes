@@ -1,0 +1,41 @@
+ body{
+      background-color: yellow;
+ }
+
+ p{
+   color:red;
+   font-size:120%;
+ }
+
+ p1{
+    color:blue;
+    font-size:120%;
+ }
+
+ p2{
+   color:purple;
+   font-size:115%;
+ }
+
+ h1{
+   color:blue;
+   font-size:120%;
+ }
+ 
+ h2{
+    color:brown;
+    font-size:110%;
+ }
+
+ li{
+    color:blue;
+    font-size:120%;
+ }
+
+ pre{
+    color: gree;
+    font-size:125%;
+ }
+
+ 
+ 

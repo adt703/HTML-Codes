@@ -1,0 +1,157 @@
+<html>
+
+<head>
+
+<title>
+Calculator
+</title>
+
+<script>
+
+var todo1;
+var num1="";
+var num2="";
+var sign ="";
+var current="";
+var tot;
+var tot1="";
+var check = true;
+
+function  getnum( val)
+{
+	
+	if(check)
+	{
+		num1 += val;
+		current+=val;
+		//var li = document.createElement("pre");
+		//var node = document.createTextNode(num1);
+		//li.appendChild(node);
+		document.getElementById("num111").innerHTML = current;
+		//.appendChild(li);
+	}
+	else
+	{
+		num2 += val;
+		current+=val;
+		document.getElementById("num111").innerHTML = current;
+	}
+	
+	
+}
+
+
+
+function  operator( opt)
+{
+	sign+=opt;
+	current+=sign;
+	document.getElementById("num111").innerHTML =  current;
+	if(opt=='+')
+	{
+		todo1 = 1;
+		check=false;
+	}
+	else if(opt=='-')
+	{
+		todo1 = 2;
+		check=false;
+	}
+	else
+	{
+		todo1=0;
+		check=false;
+	}
+}
+
+function equal()
+{
+	
+	var x = Number(num1);
+	var y = Number(num2);
+	
+	if(todo1==1)
+	{
+		tot = x+y;
+	}
+	else if(todo1==2)
+	{
+		tot = x-y;
+	}
+	else
+	{
+		tot = x*y;
+	}
+	tot1+=tot;
+	current+=("="+tot1);
+	document.getElementById("num111").innerHTML =  current;
+}
+
+function reset()
+{
+	current ="";
+	todo1;
+	num1="";
+	num2="";
+	sign ="";
+	current="";
+	tot;
+	tot1="";
+	check = true;
+	document.getElementById("num111").innerHTML =  current;
+}
+</script>
+
+<style>
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	#content{
+		width:400px;
+		height:200px;
+		padding:6px 12px 6px 12px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-left:-160px;
+		margin-top:-170px;
+		text-align:center;
+	}
+</style>
+
+</head>
+
+<body>
+
+	<div id="content">
+			<pre id="num111"></pre>
+			
+			<br><br>
+
+			<button onclick="getnum(0)">0</button>
+			<button onclick="getnum(1)">1</button>
+			<button onclick="getnum(2)">2</button>
+			<button onclick="getnum(3)">3</button>
+			<button onclick="getnum(4)">4</button>
+
+			</br>
+
+			<button onclick="getnum(5)">5</button>
+			<button onclick="getnum(6)">6</button>
+			<button onclick="getnum(7)">7</button>
+			<button onclick="getnum(8)">8</button>
+			<button onclick="getnum(9)">9</button>
+
+			</br>
+
+			<button onclick="operator('+')">+</button>
+			<button onclick="operator('-')">-</button>
+			<button onclick="operator('x')">x</button>
+			<button onclick="equal()">=</button>
+			<button onclick="reset()">R</button>
+	</div>
+
+</body>
+
+</html>

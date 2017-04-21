@@ -1,0 +1,144 @@
+
+<html>
+
+<head>
+
+<title>
+Panda Boutique
+</title>
+
+<style>
+ body{
+      background-color: grey;
+ }
+
+ p{
+   color:blue;
+   font-size:145%;
+ }
+
+ h1{
+   color:blue;
+   font-size:250%;
+   
+ }
+ 
+ h2{
+    color:brown;
+    font-size:150%;
+     
+ }
+
+
+
+ #main_bg{
+     min-width:224px;
+     min-height:2%;
+     width:20%;
+     height:auto;
+     margin-left:750px;
+     
+ }
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<img src="panda.jpg" id="main_bg"/>
+
+
+<h1 align = "center" >
+Panda Boutique
+</h1>
+
+<p align = "center">
+Welcome to Panda Boutique. You can search for an item through our Ebay Search or if you have purchased an item and wished to track your current item, pleaase use our Tracking order down below.
+</p>
+
+<table border="1" style="width:20%" align = "center">
+<br/> <br/>
+<th>
+<a href ="#Search"></br>1 Search item</a>
+<br/><br/>
+<a href = "#Track"> 2 Track Order</a>
+<br/><br/>
+</th>
+</table>
+</br></br>
+
+<hr>
+
+
+<h2 id = "Search">
+Search Item
+</h2>
+<form method="post" action="http://www.ebay.com.au/sch/i.html" >
+
+  Type keywords to search: 
+  <input type="text" name="_nkw">
+  
+  <select name="_sacat">
+    <option value="" selected>All</option>
+    <option value="ant">Antiques</option>
+    <option value="art">Art</option>
+    <option value="bm">Books,Magazines</option>
+    <option value="cam">Camera</option>
+    <option value="cn">Coins</option>
+    <option value="col">Collectables</option>
+    <option value="mov">Movies</option>
+    <option value="mus">Music</option>
+    <option value="stm">Stamps</option>
+  </select>
+  <br/><br/>
+
+  <input type="submit" value="Search">
+  <input type="reset" value="Reset form">
+
+</form>
+
+
+<hr>
+
+
+<h2 id="Track">
+Tracking Order
+</h2>
+
+<form action="unishop" method="get">
+
+<b><i>Customer Name</i></b>
+<input Happy type="text" name="custname" pattern="^[A-Z]{1}[a-z]*$" required> 
+</br></br>
+
+<b><i>Post code</i></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="pstcd" pattern="^[0-9]{4}$" required> 
+</br></br>
+
+<b><i>Order date</i></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="ordd" pattern="^[0-3]{1}[0-9]{1}/[0-1]{1}[0-9]{1}/[0-9]{4}$" required> 
+</br></br>
+
+<b><i>Order code</i></b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="ordc" pattern="^[a-zA-z]{3}\-[a-zA-z]{3}\-[a-zA-Z]{3}$" required> 
+</br></br>
+
+<b><i>Contact number</i></b>
+<input type="text" name="cnum" pattern="^\([0]{1}[2]{1}\)[0-9]{9}$" required> 
+</br>
+
+<br /> <br />
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+
+</html>
